@@ -1,0 +1,1055 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19BC64B9-832D-4419-A00C-343CEB821715}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UltimateBravery</RootNamespace>
+    <AssemblyName>UltimateBravery</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Ultimate Bravery</ProductName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6363C5CDDC8167EE8EDFB01E1079B08E0C8A5B6A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UltimateBravery_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Champion.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Runes.cs" />
+    <Compile Include="Summoner.cs" />
+    <Compile Include="UltimateBraveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UltimateBraveryForm.Designer.cs">
+      <DependentUpon>UltimateBraveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UltimateBraveryForm.resx">
+      <DependentUpon>UltimateBraveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Akali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alistar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amumu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anivia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ashe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aurelion Sol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Abyssal Mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adaptive Helmet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archangels Staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ardent Censer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Athenes Unholy Grail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banshees Veil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Berserkers Greaves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blade of the Ruined King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boots of Mobility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boots of Swiftness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dead Mans Plate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deaths Dance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duskblade of Draktharr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edge of Night.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Essence Reaver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frozen Heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frozen Mallot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gargoyle Stoneplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardian Angel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guinsoos Rageblade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hextech GLP-800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hextech Gunblade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hextech Protobelt-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iceborn Gauntlet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infinity Edge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ionian Boots of Lucidity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knights Vow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liandrys Torment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lich Bane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locket of the Iron Solari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lord Dominiks Regards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ludens Echo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manamune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maw of Malmortius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mejais Soulstealer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mercurial Scimitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mercurys Treads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mikaels Crucible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morellonomicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mortal Reminder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nashors Tooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ninja Tabi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ohmwrecker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phantom Dancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rabadons Deathcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Randuins Omen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rapid Fire Cannon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ravenous Hydra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redemption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remnant of the Ascended.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remnant of the Aspect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remnant of the Watchers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Righteous Glory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rod of Ages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Runaans Hurricane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rylais Crystal Scepter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shurelyas Reverie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sorcerers Shoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spear of Shojin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spellbinder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spirit Visage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Statikk Shiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Steraks Gage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stormrazor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sunfire Cape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Black Cleaver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Bloodthirster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thornmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titanic Hydra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinity Force.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twin Shadows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Void Staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warmogs Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wits End.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Youmuus Ghostblade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zekes Convergence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zhonyas Hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zzrot Portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blitzcrank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Braum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caitlyn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camille.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cassiopeia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChoGath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Darius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dr Mundo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Draven.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aatrox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekko.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elise.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Evelynn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ezreal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiddlesticks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiora.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fizz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Galio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gangplank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gragas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hecarim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heimerdinger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illaoi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Irelia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ivern.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Janna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jarvan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jax.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jayce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jhin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KaiSa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kalista.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karthus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kassadin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Katarina.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kayle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kayn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kennen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KhaZix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kindred.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KogMaw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jinx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leblanc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lee Sin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leona.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lissandra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lucian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lulu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lux.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malphite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malzahar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maokai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Master Yi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miss Fortune.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mordekaiser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morgana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nami.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nautilus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neeko.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nidalee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nocturne.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nunu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olaf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orianna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ornn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pantheon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poppy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pyke.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qiyana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quinn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rakan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rammus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RekSai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renekton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rengar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riven.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rumble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryze.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sejuani.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shyvana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Singed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sivir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skarner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sona.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soraka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sylas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Syndra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tahm Kench.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taliyah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Talon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taric.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teemo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tristana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trundle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tryndamere.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twisted Fate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Udyr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Urgot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Varus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vayne.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Veigar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VelKoz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Viktor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vladimir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volibear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warwick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wukong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xayah.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xerath.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xin Zhao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yasuo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yorick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yuumi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ziggs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zilean.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clarity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cleanse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exhaust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ignite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Smite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teleport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Absolute Focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aftershock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Approach Velocity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arcane Comet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biscuit Delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bone Plating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Celeriry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cheap Shot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conditioning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conquerer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cosmic Insight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coup de Grace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark Harvest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Demolish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electrocute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eyeball Collection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleet Footwork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Font of Life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Future%27s Market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gathering Storm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ghost Poro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grasp of the Undying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hail of Blades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hextech Flashtraption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ingenious Hunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kleptomancy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last Stand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend Alacrity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend Bloodline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend Tenacity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lethal Tempo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magical Footwear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manaflow Band.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minion Dematerializer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nimbus Cloak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nullifying Orb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Overgrowth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Overheal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perfect Timing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phase Rush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Predator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Presence of Mind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Press The Attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ravenous Hunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relentless Hunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Revitalize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scorch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Second Wind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield Bash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sudden Impact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Summon Aery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taste of Blood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time Warp Tonic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transcendence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Triumph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ultimate Hunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unflinching.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unsealed Spellbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Waterwalking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zombie Ward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glacial Augment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glacial Augment_Alt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic Resistance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cooldown Reduction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attack Speed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adaptive Force.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
